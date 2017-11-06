@@ -1,0 +1,874 @@
+<app>
+
+        <cluster name="boss-app-x" bigdistrictflag="true" desc="boss-app-x">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::x.app.was.ha.cmcc:30009"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::x.app.was.ha.cmcc:30009"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::x.app.was.ha.cmcc:30009"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::x.app.was.ha.cmcc:30009"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::x.app.was.ha.cmcc:31209"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::x.app.was.ha.cmcc:31209"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::x.app.was.ha.cmcc:31209"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-a" bigdistrictflag="true" desc="boss-app-a">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::a.app.was.ha.cmcc:37100,:na.node3.was.ha.cmcc:37111,:na.node3.was.ha.cmcc:37112,:na.node4.was.ha.cmcc:37111,:na.node4.was.ha.cmcc:37112,:na.node5.was.ha.cmcc:37111,:na.node5.was.ha.cmcc:37112,:na.node6.was.ha.cmcc:37111,:na.node6.was.ha.cmcc:37112,:na.node7.was.ha.cmcc:37111,:na.node7.was.ha.cmcc:37112,:na.node8.was.ha.cmcc:37111,:na.node8.was.ha.cmcc:37112,:na.node9.was.ha.cmcc:37111,:na.node9.was.ha.cmcc:37112,:na.node10.was.ha.cmcc:37111,:na.node10.was.ha.cmcc:37112"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::a.app.was.ha.cmcc:37100,:na.node3.was.ha.cmcc:37111,:na.node3.was.ha.cmcc:37112,:na.node4.was.ha.cmcc:37111,:na.node4.was.ha.cmcc:37112,:na.node5.was.ha.cmcc:37111,:na.node5.was.ha.cmcc:37112,:na.node6.was.ha.cmcc:37111,:na.node6.was.ha.cmcc:37112,:na.node7.was.ha.cmcc:37111,:na.node7.was.ha.cmcc:37112,:na.node8.was.ha.cmcc:37111,:na.node8.was.ha.cmcc:37112,:na.node9.was.ha.cmcc:37111,:na.node9.was.ha.cmcc:37112,:na.node10.was.ha.cmcc:37111,:na.node10.was.ha.cmcc:37112"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::a.app.was.ha.cmcc:37100,:na.node3.was.ha.cmcc:37111,:na.node3.was.ha.cmcc:37112,:na.node4.was.ha.cmcc:37111,:na.node4.was.ha.cmcc:37112,:na.node5.was.ha.cmcc:37111,:na.node5.was.ha.cmcc:37112,:na.node6.was.ha.cmcc:37111,:na.node6.was.ha.cmcc:37112,:na.node7.was.ha.cmcc:37111,:na.node7.was.ha.cmcc:37112,:na.node8.was.ha.cmcc:37111,:na.node8.was.ha.cmcc:37112,:na.node9.was.ha.cmcc:37111,:na.node9.was.ha.cmcc:37112,:na.node10.was.ha.cmcc:37111,:na.node10.was.ha.cmcc:37112"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::a.app.was.ha.cmcc:37101,:na.node3.was.ha.cmcc:37130,:na.node4.was.ha.cmcc:37130,:na.node5.was.ha.cmcc:37130,:na.node6.was.ha.cmcc:37130,:na.node7.was.ha.cmcc:37130,:na.node8.was.ha.cmcc:37130"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::a.app.was.ha.cmcc:37101,:na.node3.was.ha.cmcc:37130,:na.node4.was.ha.cmcc:37130,:na.node5.was.ha.cmcc:37130,:na.node6.was.ha.cmcc:37130,:na.node7.was.ha.cmcc:37130,:na.node8.was.ha.cmcc:37130"/>
+						 </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::a.app.was.ha.cmcc:37101,:na.node3.was.ha.cmcc:37130,:na.node4.was.ha.cmcc:37130,:na.node5.was.ha.cmcc:37130,:na.node6.was.ha.cmcc:37130,:na.node7.was.ha.cmcc:37130,:na.node8.was.ha.cmcc:37130"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::a.app.was.ha.cmcc:37101,:na.node3.was.ha.cmcc:37130,:na.node4.was.ha.cmcc:37130,:na.node5.was.ha.cmcc:37130,:na.node6.was.ha.cmcc:37130,:na.node7.was.ha.cmcc:37130,:na.node8.was.ha.cmcc:37130"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-k" bigdistrictflag="true" desc="boss-app-k">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::k.app.was.ha.cmcc:37400,:na.node7.was.ha.cmcc:37411,:na.node7.was.ha.cmcc:37412,:na.node8.was.ha.cmcc:37411,:na.node8.was.ha.cmcc:37412,:na.node9.was.ha.cmcc:37411,:na.node9.was.ha.cmcc:37412,:na.node10.was.ha.cmcc:37411,:na.node10.was.ha.cmcc:37412"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::k.app.was.ha.cmcc:37400,:na.node7.was.ha.cmcc:37411,:na.node7.was.ha.cmcc:37412,:na.node8.was.ha.cmcc:37411,:na.node8.was.ha.cmcc:37412,:na.node9.was.ha.cmcc:37411,:na.node9.was.ha.cmcc:37412,:na.node10.was.ha.cmcc:37411,:na.node10.was.ha.cmcc:37412"/>
+                </env>
+				   <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::k.app.was.ha.cmcc:37400,:na.node7.was.ha.cmcc:37411,:na.node7.was.ha.cmcc:37412,:na.node8.was.ha.cmcc:37411,:na.node8.was.ha.cmcc:37412,:na.node9.was.ha.cmcc:37411,:na.node9.was.ha.cmcc:37412,:na.node10.was.ha.cmcc:37411,:na.node10.was.ha.cmcc:37412"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::k.app.was.ha.cmcc:37401,:na.node3.was.ha.cmcc:37430,:na.node4.was.ha.cmcc:37430"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::k.app.was.ha.cmcc:37401,:na.node3.was.ha.cmcc:37430,:na.node4.was.ha.cmcc:37430"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::k.app.was.ha.cmcc:37401,:na.node3.was.ha.cmcc:37430,:na.node4.was.ha.cmcc:37430"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::k.app.was.ha.cmcc:37401,:na.node3.was.ha.cmcc:37430,:na.node4.was.ha.cmcc:37430"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-f" bigdistrictflag="true" desc="boss-app-f">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::f.app.was.ha.cmcc:39200,:na.node1.was.ha.cmcc:39211,:na.node1.was.ha.cmcc:39212,:na.node2.was.ha.cmcc:39211,:na.node2.was.ha.cmcc:39212"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::f.app.was.ha.cmcc:39200,:na.node1.was.ha.cmcc:39211,:na.node1.was.ha.cmcc:39212,:na.node2.was.ha.cmcc:39211,:na.node2.was.ha.cmcc:39212"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::f.app.was.ha.cmcc:39200,:na.node1.was.ha.cmcc:39211,:na.node1.was.ha.cmcc:39212,:na.node2.was.ha.cmcc:39211,:na.node2.was.ha.cmcc:39212"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::f.app.was.ha.cmcc:39201,:na.node1.was.ha.cmcc:39230,:na.node2.was.ha.cmcc:39230"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::f.app.was.ha.cmcc:39201,:na.node1.was.ha.cmcc:39230,:na.node2.was.ha.cmcc:39230"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::f.app.was.ha.cmcc:39201,:na.node1.was.ha.cmcc:39230,:na.node2.was.ha.cmcc:39230"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::f.app.was.ha.cmcc:39201,:na.node1.was.ha.cmcc:39230,:na.node2.was.ha.cmcc:39230"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-l" bigdistrictflag="true" desc="boss-app-l">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::l.app.was.ha.cmcc:39500,:na.node1.was.ha.cmcc:39511,:na.node1.was.ha.cmcc:39512,:na.node2.was.ha.cmcc:39511,:na.node2.was.ha.cmcc:39512"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::l.app.was.ha.cmcc:39500,:na.node1.was.ha.cmcc:39511,:na.node1.was.ha.cmcc:39512,:na.node2.was.ha.cmcc:39511,:na.node2.was.ha.cmcc:39512"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::l.app.was.ha.cmcc:39500,:na.node1.was.ha.cmcc:39511,:na.node1.was.ha.cmcc:39512,:na.node2.was.ha.cmcc:39511,:na.node2.was.ha.cmcc:39512"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::l.app.was.ha.cmcc:39501,:na.node9.was.ha.cmcc:39530,:na.node10.was.ha.cmcc:39530"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::l.app.was.ha.cmcc:39501,:na.node9.was.ha.cmcc:39530,:na.node10.was.ha.cmcc:39530"/>
+                </env>
+				
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::l.app.was.ha.cmcc:39501,:na.node9.was.ha.cmcc:39530,:na.node10.was.ha.cmcc:39530"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::l.app.was.ha.cmcc:39501,:na.node9.was.ha.cmcc:39530,:na.node10.was.ha.cmcc:39530"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-g" bigdistrictflag="true" desc="boss-app-g">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::g.app.was.ha.cmcc:37300,:na.node3.was.ha.cmcc:37311,:na.node3.was.ha.cmcc:37312,:na.node4.was.ha.cmcc:37311,:na.node4.was.ha.cmcc:37312,:na.node5.was.ha.cmcc:37311,:na.node5.was.ha.cmcc:37312,:na.node6.was.ha.cmcc:37311,:na.node6.was.ha.cmcc:37312"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::g.app.was.ha.cmcc:37300,:na.node3.was.ha.cmcc:37311,:na.node3.was.ha.cmcc:37312,:na.node4.was.ha.cmcc:37311,:na.node4.was.ha.cmcc:37312,:na.node5.was.ha.cmcc:37311,:na.node5.was.ha.cmcc:37312,:na.node6.was.ha.cmcc:37311,:na.node6.was.ha.cmcc:37312"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::g.app.was.ha.cmcc:37300,:na.node3.was.ha.cmcc:37311,:na.node3.was.ha.cmcc:37312,:na.node4.was.ha.cmcc:37311,:na.node4.was.ha.cmcc:37312,:na.node5.was.ha.cmcc:37311,:na.node5.was.ha.cmcc:37312,:na.node6.was.ha.cmcc:37311,:na.node6.was.ha.cmcc:37312"/>
+                </env>
+				 <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::g.app.was.ha.cmcc:37301,:na.node1.was.ha.cmcc:37330,:na.node2.was.ha.cmcc:37330"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::g.app.was.ha.cmcc:37301,:na.node1.was.ha.cmcc:37330,:na.node2.was.ha.cmcc:37330"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::g.app.was.ha.cmcc:37301,:na.node1.was.ha.cmcc:37330,:na.node2.was.ha.cmcc:37330"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::g.app.was.ha.cmcc:37301,:na.node1.was.ha.cmcc:37330,:na.node2.was.ha.cmcc:37330"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-b" bigdistrictflag="true" desc="boss-app-b">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::b.app.was.ha.cmcc:37800,:na.node1.was.ha.cmcc:37811,:na.node1.was.ha.cmcc:37812,:na.node2.was.ha.cmcc:37811,:na.node2.was.ha.cmcc:37812,:na.node3.was.ha.cmcc:37811,:na.node3.was.ha.cmcc:37812"/>
+                </env>
+ <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::b.app.was.ha.cmcc:37800,:na.node1.was.ha.cmcc:37811,:na.node1.was.ha.cmcc:37812,:na.node2.was.ha.cmcc:37811,:na.node2.was.ha.cmcc:37812,:na.node3.was.ha.cmcc:37811,:na.node3.was.ha.cmcc:37812"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::b.app.was.ha.cmcc:37800,:na.node1.was.ha.cmcc:37811,:na.node1.was.ha.cmcc:37812,:na.node2.was.ha.cmcc:37811,:na.node2.was.ha.cmcc:37812,:na.node3.was.ha.cmcc:37811,:na.node3.was.ha.cmcc:37812"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::b.app.was.ha.cmcc:37801,:na.node5.was.ha.cmcc:37830,:na.node6.was.ha.cmcc:37830"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::b.app.was.ha.cmcc:37801,:na.node5.was.ha.cmcc:37830,:na.node6.was.ha.cmcc:37830"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::b.app.was.ha.cmcc:37801,:na.node5.was.ha.cmcc:37830,:na.node6.was.ha.cmcc:37830"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::b.app.was.ha.cmcc:37801,:na.node5.was.ha.cmcc:37830,:na.node6.was.ha.cmcc:37830"/>
+                </env>
+        </cluster>
+		 <cluster name="boss-app-c" bigdistrictflag="true" desc="boss-app-c">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::c.app.was.ha.cmcc:37900,:na.node4.was.ha.cmcc:37911,:na.node4.was.ha.cmcc:37912,:na.node5.was.ha.cmcc:37911,:na.node5.was.ha.cmcc:37912,:na.node6.was.ha.cmcc:37911,:na.node6.was.ha.cmcc:37912,:na.node7.was.ha.cmcc:37911,:na.node7.was.ha.cmcc:37912"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::c.app.was.ha.cmcc:37900,:na.node4.was.ha.cmcc:37911,:na.node4.was.ha.cmcc:37912,:na.node5.was.ha.cmcc:37911,:na.node5.was.ha.cmcc:37912,:na.node6.was.ha.cmcc:37911,:na.node6.was.ha.cmcc:37912,:na.node7.was.ha.cmcc:37911,:na.node7.was.ha.cmcc:37912"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::c.app.was.ha.cmcc:37900,:na.node4.was.ha.cmcc:37911,:na.node4.was.ha.cmcc:37912,:na.node5.was.ha.cmcc:37911,:na.node5.was.ha.cmcc:37912,:na.node6.was.ha.cmcc:37911,:na.node6.was.ha.cmcc:37912,:na.node7.was.ha.cmcc:37911,:na.node7.was.ha.cmcc:37912"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::c.app.was.ha.cmcc:37901,:na.node7.was.ha.cmcc:37930,:na.node8.was.ha.cmcc:37930"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::c.app.was.ha.cmcc:37901,:na.node7.was.ha.cmcc:37930,:na.node8.was.ha.cmcc:37930"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::c.app.was.ha.cmcc:37901,:na.node7.was.ha.cmcc:37930,:na.node8.was.ha.cmcc:37930"/>
+                </env>
+				  <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::c.app.was.ha.cmcc:37901,:na.node7.was.ha.cmcc:37930,:na.node8.was.ha.cmcc:37930"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-q" bigdistrictflag="true" desc="boss-app-q">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::q.app.was.ha.cmcc:39600,:na.node8.was.ha.cmcc:39611,:na.node8.was.ha.cmcc:39612,:na.node9.was.ha.cmcc:39611,:na.node9.was.ha.cmcc:39612,:na.node10.was.ha.cmcc:39611,:na.node10.was.ha.cmcc:39612"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::q.app.was.ha.cmcc:39600,:na.node8.was.ha.cmcc:39611,:na.node8.was.ha.cmcc:39612,:na.node9.was.ha.cmcc:39611,:na.node9.was.ha.cmcc:39612,:na.node10.was.ha.cmcc:39611,:na.node10.was.ha.cmcc:39612"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::q.app.was.ha.cmcc:39600,:na.node8.was.ha.cmcc:39611,:na.node8.was.ha.cmcc:39612,:na.node9.was.ha.cmcc:39611,:na.node9.was.ha.cmcc:39612,:na.node10.was.ha.cmcc:39611,:na.node10.was.ha.cmcc:39612"/>
+                </env>
+				<env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::q.app.was.ha.cmcc:39601,:na.node9.was.ha.cmcc:39630,:na.node10.was.ha.cmcc:39630"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::q.app.was.ha.cmcc:39601,:na.node9.was.ha.cmcc:39630,:na.node10.was.ha.cmcc:39630"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::q.app.was.ha.cmcc:39601,:na.node9.was.ha.cmcc:39630,:na.node10.was.ha.cmcc:39630"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::q.app.was.ha.cmcc:39601,:na.node9.was.ha.cmcc:39630,:na.node10.was.ha.cmcc:39630"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-e" bigdistrictflag="true" desc="boss-app-e">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::e.app.was.ha.cmcc:37201,:na.node7.was.ha.cmcc:37230,:na.node8.was.ha.cmcc:37230"/>
+                </env>
+				 <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::e.app.was.ha.cmcc:37201,:na.node7.was.ha.cmcc:37230,:na.node8.was.ha.cmcc:37230"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::e.app.was.ha.cmcc:37201,:na.node7.was.ha.cmcc:37230,:na.node8.was.ha.cmcc:37230"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::e.app.was.ha.cmcc:37200,:na.node8.was.ha.cmcc:37211,:na.node8.was.ha.cmcc:37212,:na.node9.was.ha.cmcc:37211,:na.node9.was.ha.cmcc:37212,:na.node10.was.ha.cmcc:37211,:na.node10.was.ha.cmcc:37212"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::e.app.was.ha.cmcc:37200,:na.node8.was.ha.cmcc:37211,:na.node8.was.ha.cmcc:37212,:na.node9.was.ha.cmcc:37211,:na.node9.was.ha.cmcc:37212,:na.node10.was.ha.cmcc:37211,:na.node10.was.ha.cmcc:37212"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::e.app.was.ha.cmcc:37200,:na.node8.was.ha.cmcc:37211,:na.node8.was.ha.cmcc:37212,:na.node9.was.ha.cmcc:37211,:na.node9.was.ha.cmcc:37212,:na.node10.was.ha.cmcc:37211,:na.node10.was.ha.cmcc:37212"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::e.app.was.ha.cmcc:37201,:na.node7.was.ha.cmcc:37230,:na.node8.was.ha.cmcc:37230"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-h" bigdistrictflag="true" desc="boss-app-h">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::h.app.was.ha.cmcc:39101,:na.node1.was.ha.cmcc:39130,:na.node2.was.ha.cmcc:39130"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::h.app.was.ha.cmcc:39101,:na.node1.was.ha.cmcc:39130,:na.node2.was.ha.cmcc:39130"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::h.app.was.ha.cmcc:39101,:na.node1.was.ha.cmcc:39130,:na.node2.was.ha.cmcc:39130"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::h.app.was.ha.cmcc:39100,:na.node1.was.ha.cmcc:39111,:na.node1.was.ha.cmcc:39112,:na.node2.was.ha.cmcc:39111,:na.node2.was.ha.cmcc:39112,:na.node3.was.ha.cmcc:39111,:na.node3.was.ha.cmcc:39112"/>
+                </env>
+ <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::h.app.was.ha.cmcc:39100,:na.node1.was.ha.cmcc:39111,:na.node1.was.ha.cmcc:39112,:na.node2.was.ha.cmcc:39111,:na.node2.was.ha.cmcc:39112,:na.node3.was.ha.cmcc:39111,:na.node3.was.ha.cmcc:39112"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::h.app.was.ha.cmcc:39100,:na.node1.was.ha.cmcc:39111,:na.node1.was.ha.cmcc:39112,:na.node2.was.ha.cmcc:39111,:na.node2.was.ha.cmcc:39112,:na.node3.was.ha.cmcc:39111,:na.node3.was.ha.cmcc:39112"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::h.app.was.ha.cmcc:39101,:na.node1.was.ha.cmcc:39130,:na.node2.was.ha.cmcc:39130"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-r" bigdistrictflag="true" desc="boss-app-r">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::r.app.was.ha.cmcc:37701,:na.node3.was.ha.cmcc:37730,:na.node4.was.ha.cmcc:37730,:na.node5.was.ha.cmcc:37730,:na.node6.was.ha.cmcc:37730"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::r.app.was.ha.cmcc:37701,:na.node3.was.ha.cmcc:37730,:na.node4.was.ha.cmcc:37730,:na.node5.was.ha.cmcc:37730,:na.node6.was.ha.cmcc:37730"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::r.app.was.ha.cmcc:37701,:na.node3.was.ha.cmcc:37730,:na.node4.was.ha.cmcc:37730,:na.node5.was.ha.cmcc:37730,:na.node6.was.ha.cmcc:37730"/>
+                </env>
+				<env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::r.app.was.ha.cmcc:37700,:na.node4.was.ha.cmcc:37711,:na.node4.was.ha.cmcc:37712,:na.node5.was.ha.cmcc:37711,:na.node5.was.ha.cmcc:37712,:na.node6.was.ha.cmcc:37711,:na.node6.was.ha.cmcc:37712,:na.node7.was.ha.cmcc:37711,:na.node7.was.ha.cmcc:37712"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::r.app.was.ha.cmcc:37700,:na.node4.was.ha.cmcc:37711,:na.node4.was.ha.cmcc:37712,:na.node5.was.ha.cmcc:37711,:na.node5.was.ha.cmcc:37712,:na.node6.was.ha.cmcc:37711,:na.node6.was.ha.cmcc:37712,:na.node7.was.ha.cmcc:37711,:na.node7.was.ha.cmcc:37712"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::r.app.was.ha.cmcc:37700,:na.node4.was.ha.cmcc:37711,:na.node4.was.ha.cmcc:37712,:na.node5.was.ha.cmcc:37711,:na.node5.was.ha.cmcc:37712,:na.node6.was.ha.cmcc:37711,:na.node6.was.ha.cmcc:37712,:na.node7.was.ha.cmcc:37711,:na.node7.was.ha.cmcc:37712"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::r.app.was.ha.cmcc:37701,:na.node3.was.ha.cmcc:37730,:na.node4.was.ha.cmcc:37730,:na.node5.was.ha.cmcc:37730,:na.node6.was.ha.cmcc:37730"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-s" bigdistrictflag="true" desc="boss-app-s">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::s.app.was.ha.cmcc:37601,:na.node9.was.ha.cmcc:37630,:na.node10.was.ha.cmcc:37630"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::s.app.was.ha.cmcc:37601,:na.node9.was.ha.cmcc:37630,:na.node10.was.ha.cmcc:37630"/>
+                </env>
+				 <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::s.app.was.ha.cmcc:37601,:na.node9.was.ha.cmcc:37630,:na.node10.was.ha.cmcc:37630"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::s.app.was.ha.cmcc:37600,:na.node1.was.ha.cmcc:37611,:na.node1.was.ha.cmcc:37612,:na.node2.was.ha.cmcc:37611,:na.node2.was.ha.cmcc:37612,:na.node3.was.ha.cmcc:37611,:na.node3.was.ha.cmcc:37612"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::s.app.was.ha.cmcc:37600,:na.node1.was.ha.cmcc:37611,:na.node1.was.ha.cmcc:37612,:na.node2.was.ha.cmcc:37611,:na.node2.was.ha.cmcc:37612,:na.node3.was.ha.cmcc:37611,:na.node3.was.ha.cmcc:37612"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::s.app.was.ha.cmcc:37600,:na.node1.was.ha.cmcc:37611,:na.node1.was.ha.cmcc:37612,:na.node2.was.ha.cmcc:37611,:na.node2.was.ha.cmcc:37612,:na.node3.was.ha.cmcc:37611,:na.node3.was.ha.cmcc:37612"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::s.app.was.ha.cmcc:37601,:na.node9.was.ha.cmcc:37630,:na.node10.was.ha.cmcc:37630"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-d" bigdistrictflag="true" desc="boss-app-d">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::d.app.was.ha.cmcc:37501,:na.node3.was.ha.cmcc:37530,:na.node4.was.ha.cmcc:37530"/>
+                </env>
+				<env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::d.app.was.ha.cmcc:37501,:na.node3.was.ha.cmcc:37530,:na.node4.was.ha.cmcc:37530"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::d.app.was.ha.cmcc:37501,:na.node3.was.ha.cmcc:37530,:na.node4.was.ha.cmcc:37530"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::d.app.was.ha.cmcc:37500,:na.node8.was.ha.cmcc:37511,:na.node8.was.ha.cmcc:37512,:na.node9.was.ha.cmcc:37511,:na.node9.was.ha.cmcc:37512,:na.node10.was.ha.cmcc:37511,:na.node10.was.ha.cmcc:37512"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::d.app.was.ha.cmcc:37500,:na.node8.was.ha.cmcc:37511,:na.node8.was.ha.cmcc:37512,:na.node9.was.ha.cmcc:37511,:na.node9.was.ha.cmcc:37512,:na.node10.was.ha.cmcc:37511,:na.node10.was.ha.cmcc:37512"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::d.app.was.ha.cmcc:37500,:na.node8.was.ha.cmcc:37511,:na.node8.was.ha.cmcc:37512,:na.node9.was.ha.cmcc:37511,:na.node9.was.ha.cmcc:37512,:na.node10.was.ha.cmcc:37511,:na.node10.was.ha.cmcc:37512"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::d.app.was.ha.cmcc:37501,:na.node3.was.ha.cmcc:37530,:na.node4.was.ha.cmcc:37530"/>
+                </env>
+				</cluster>
+
+        <cluster name="boss-app-n" bigdistrictflag="true" desc="boss-app-n">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::n.app.was.ha.cmcc:37001,:na.node1.was.ha.cmcc:37030,:na.node2.was.ha.cmcc:37030"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::n.app.was.ha.cmcc:37001,:na.node1.was.ha.cmcc:37030,:na.node2.was.ha.cmcc:37030"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::n.app.was.ha.cmcc:37001,:na.node1.was.ha.cmcc:37030,:na.node2.was.ha.cmcc:37030"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::n.app.was.ha.cmcc:37000,:na.node4.was.ha.cmcc:37011,:na.node4.was.ha.cmcc:37012,:na.node5.was.ha.cmcc:37011,:na.node5.was.ha.cmcc:37012,:na.node6.was.ha.cmcc:37011,:na.node6.was.ha.cmcc:37012,:na.node7.was.ha.cmcc:37011,:na.node7.was.ha.cmcc:37012"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::n.app.was.ha.cmcc:37000,:na.node4.was.ha.cmcc:37011,:na.node4.was.ha.cmcc:37012,:na.node5.was.ha.cmcc:37011,:na.node5.was.ha.cmcc:37012,:na.node6.was.ha.cmcc:37011,:na.node6.was.ha.cmcc:37012,:na.node7.was.ha.cmcc:37011,:na.node7.was.ha.cmcc:37012"/>
+                </env>
+				    <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::n.app.was.ha.cmcc:37000,:na.node4.was.ha.cmcc:37011,:na.node4.was.ha.cmcc:37012,:na.node5.was.ha.cmcc:37011,:na.node5.was.ha.cmcc:37012,:na.node6.was.ha.cmcc:37011,:na.node6.was.ha.cmcc:37012,:na.node7.was.ha.cmcc:37011,:na.node7.was.ha.cmcc:37012"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::n.app.was.ha.cmcc:37001,:na.node1.was.ha.cmcc:37030,:na.node2.was.ha.cmcc:37030"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-j" bigdistrictflag="true" desc="boss-app-j">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::j.app.was.ha.cmcc:39301,:na.node5.was.ha.cmcc:39330,:na.node6.was.ha.cmcc:39330"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::j.app.was.ha.cmcc:39301,:na.node5.was.ha.cmcc:39330,:na.node6.was.ha.cmcc:39330"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::j.app.was.ha.cmcc:39301,:na.node5.was.ha.cmcc:39330,:na.node6.was.ha.cmcc:39330"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::j.app.was.ha.cmcc:39300,:na.node1.was.ha.cmcc:39311,:na.node1.was.ha.cmcc:39312,:na.node2.was.ha.cmcc:39311,:na.node2.was.ha.cmcc:39312,:na.node3.was.ha.cmcc:39311,:na.node3.was.ha.cmcc:39312"/>
+                </env>
+				
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::j.app.was.ha.cmcc:39300,:na.node1.was.ha.cmcc:39311,:na.node1.was.ha.cmcc:39312,:na.node2.was.ha.cmcc:39311,:na.node2.was.ha.cmcc:39312,:na.node3.was.ha.cmcc:39311,:na.node3.was.ha.cmcc:39312"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::j.app.was.ha.cmcc:39300,:na.node1.was.ha.cmcc:39311,:na.node1.was.ha.cmcc:39312,:na.node2.was.ha.cmcc:39311,:na.node2.was.ha.cmcc:39312,:na.node3.was.ha.cmcc:39311,:na.node3.was.ha.cmcc:39312"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::j.app.was.ha.cmcc:39301,:na.node5.was.ha.cmcc:39330,:na.node6.was.ha.cmcc:39330"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-m" bigdistrictflag="true" desc="boss-app-m">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::m.app.was.ha.cmcc:39801,:na.node9.was.ha.cmcc:39830,:na.node10.was.ha.cmcc:39830"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::m.app.was.ha.cmcc:39801,:na.node9.was.ha.cmcc:39830,:na.node10.was.ha.cmcc:39830"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::m.app.was.ha.cmcc:39801,:na.node9.was.ha.cmcc:39830,:na.node10.was.ha.cmcc:39830"/>
+                </env>
+				 <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::m.app.was.ha.cmcc:39800,:na.node8.was.ha.cmcc:39811,:na.node8.was.ha.cmcc:39812,:na.node9.was.ha.cmcc:39811,:na.node9.was.ha.cmcc:39812,:na.node10.was.ha.cmcc:39811,:na.node10.was.ha.cmcc:39812"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::m.app.was.ha.cmcc:39800,:na.node8.was.ha.cmcc:39811,:na.node8.was.ha.cmcc:39812,:na.node9.was.ha.cmcc:39811,:na.node9.was.ha.cmcc:39812,:na.node10.was.ha.cmcc:39811,:na.node10.was.ha.cmcc:39812"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::m.app.was.ha.cmcc:39800,:na.node8.was.ha.cmcc:39811,:na.node8.was.ha.cmcc:39812,:na.node9.was.ha.cmcc:39811,:na.node9.was.ha.cmcc:39812,:na.node10.was.ha.cmcc:39811,:na.node10.was.ha.cmcc:39812"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::m.app.was.ha.cmcc:39801,:na.node9.was.ha.cmcc:39830,:na.node10.was.ha.cmcc:39830"/>
+                </env>
+        </cluster>
+
+        <cluster name="boss-app-p" bigdistrictflag="true" desc="boss-app-p">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::p.app.was.ha.cmcc:39401,:na.node7.was.ha.cmcc:39430,:na.node8.was.ha.cmcc:39430"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::p.app.was.ha.cmcc:39401,:na.node7.was.ha.cmcc:39430,:na.node8.was.ha.cmcc:39430"/>
+                </env>
+				
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::p.app.was.ha.cmcc:39401,:na.node7.was.ha.cmcc:39430,:na.node8.was.ha.cmcc:39430"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::p.app.was.ha.cmcc:39400,:na.node4.was.ha.cmcc:39411,:na.node4.was.ha.cmcc:39412,:na.node5.was.ha.cmcc:39411,:na.node5.was.ha.cmcc:39412,:na.node6.was.ha.cmcc:39411,:na.node6.was.ha.cmcc:39412,:na.node7.was.ha.cmcc:39411,:na.node7.was.ha.cmcc:39412"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::p.app.was.ha.cmcc:39400,:na.node4.was.ha.cmcc:39411,:na.node4.was.ha.cmcc:39412,:na.node5.was.ha.cmcc:39411,:na.node5.was.ha.cmcc:39412,:na.node6.was.ha.cmcc:39411,:na.node6.was.ha.cmcc:39412,:na.node7.was.ha.cmcc:39411,:na.node7.was.ha.cmcc:39412"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::p.app.was.ha.cmcc:39400,:na.node4.was.ha.cmcc:39411,:na.node4.was.ha.cmcc:39412,:na.node5.was.ha.cmcc:39411,:na.node5.was.ha.cmcc:39412,:na.node6.was.ha.cmcc:39411,:na.node6.was.ha.cmcc:39412,:na.node7.was.ha.cmcc:39411,:na.node7.was.ha.cmcc:39412"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::p.app.was.ha.cmcc:39401,:na.node7.was.ha.cmcc:39430,:na.node8.was.ha.cmcc:39430"/>
+                </env>
+        </cluster>
+		 <cluster name="na-g1" bigdistrictflag="true" desc="na-g1">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g1.app.was.ha.cmcc:38210,:na.node11.was.ha.cmcc:38210,:na.node12.was.ha.cmcc:38210,:na.node11.was.ha.cmcc:38211,:na.node12.was.ha.cmcc:38211"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g1.app.was.ha.cmcc:38212,:na.node11.was.ha.cmcc:38212,:na.node12.was.ha.cmcc:38212,:na.node11.was.ha.cmcc:38213,:na.node12.was.ha.cmcc:38213"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g1.app.was.ha.cmcc:38214,:na.node11.was.ha.cmcc:38214,:na.node12.was.ha.cmcc:38214,:na.node11.was.ha.cmcc:38215,:na.node12.was.ha.cmcc:38215"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g1.app.was.ha.cmcc:38216,:na.node11.was.ha.cmcc:38216,:na.node12.was.ha.cmcc:38216,:na.node11.was.ha.cmcc:38217,:na.node12.was.ha.cmcc:38217"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g1.app.was.ha.cmcc:38218,:na.node11.was.ha.cmcc:38218,:na.node12.was.ha.cmcc:38218,:na.node11.was.ha.cmcc:38219,:na.node12.was.ha.cmcc:38219"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g1.app.was.ha.cmcc:38220,:na.node11.was.ha.cmcc:38220,:na.node12.was.ha.cmcc:38220,:na.node11.was.ha.cmcc:38221,:na.node12.was.ha.cmcc:38221"/>
+                </env>
+				 <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g1.app.was.ha.cmcc:38222,:na.node11.was.ha.cmcc:38222,:na.node12.was.ha.cmcc:38222,:na.node11.was.ha.cmcc:38223,:na.node12.was.ha.cmcc:38223"/>
+                </env>
+        </cluster>
+
+        <cluster name="na-g2" bigdistrictflag="true" desc="na-g2">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g2.app.was.ha.cmcc:38310,:na.node13.was.ha.cmcc:38310,:na.node14.was.ha.cmcc:38310,:na.node13.was.ha.cmcc:38311,:na.node14.was.ha.cmcc:38311"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g2.app.was.ha.cmcc:38312,:na.node13.was.ha.cmcc:38312,:na.node14.was.ha.cmcc:38312,:na.node13.was.ha.cmcc:38313,:na.node14.was.ha.cmcc:38313"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g2.app.was.ha.cmcc:38314,:na.node13.was.ha.cmcc:38314,:na.node14.was.ha.cmcc:38314,:na.node13.was.ha.cmcc:38315,:na.node14.was.ha.cmcc:38315"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g2.app.was.ha.cmcc:38316,:na.node13.was.ha.cmcc:38316,:na.node14.was.ha.cmcc:38316,:na.node13.was.ha.cmcc:38317,:na.node14.was.ha.cmcc:38317"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g2.app.was.ha.cmcc:38318,:na.node13.was.ha.cmcc:38318,:na.node14.was.ha.cmcc:38318,:na.node13.was.ha.cmcc:38319,:na.node14.was.ha.cmcc:38319"/>
+                </env>
+				  <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g2.app.was.ha.cmcc:38320,:na.node13.was.ha.cmcc:38320,:na.node14.was.ha.cmcc:38320,:na.node13.was.ha.cmcc:38321,:na.node14.was.ha.cmcc:38321"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g2.app.was.ha.cmcc:38322,:na.node13.was.ha.cmcc:38322,:na.node14.was.ha.cmcc:38322,:na.node13.was.ha.cmcc:38323,:na.node14.was.ha.cmcc:38323"/>
+                </env>
+        </cluster>
+
+        <cluster name="na-g3" bigdistrictflag="true" desc="na-g3">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g3.app.was.ha.cmcc:38410,:na.node15.was.ha.cmcc:38410,:na.node16.was.ha.cmcc:38410,:na.node15.was.ha.cmcc:38411,:na.node16.was.ha.cmcc:38411"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g3.app.was.ha.cmcc:38412,:na.node15.was.ha.cmcc:38412,:na.node16.was.ha.cmcc:38412,:na.node15.was.ha.cmcc:38413,:na.node16.was.ha.cmcc:38413"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g3.app.was.ha.cmcc:38414,:na.node15.was.ha.cmcc:38414,:na.node16.was.ha.cmcc:38414,:na.node15.was.ha.cmcc:38415,:na.node16.was.ha.cmcc:38415"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g3.app.was.ha.cmcc:38416,:na.node15.was.ha.cmcc:38416,:na.node16.was.ha.cmcc:38416,:na.node15.was.ha.cmcc:38417,:na.node16.was.ha.cmcc:38417"/>
+                </env>
+				 <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g3.app.was.ha.cmcc:38418,:na.node15.was.ha.cmcc:38418,:na.node16.was.ha.cmcc:38418,:na.node15.was.ha.cmcc:38419,:na.node16.was.ha.cmcc:38419"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g3.app.was.ha.cmcc:38420,:na.node15.was.ha.cmcc:38420,:na.node16.was.ha.cmcc:38420,:na.node15.was.ha.cmcc:38421,:na.node16.was.ha.cmcc:38421"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g3.app.was.ha.cmcc:38422,:na.node15.was.ha.cmcc:38422,:na.node16.was.ha.cmcc:38422,:na.node15.was.ha.cmcc:38423,:na.node16.was.ha.cmcc:38423"/>
+                </env>
+        </cluster>
+
+        <cluster name="na-g4" bigdistrictflag="true" desc="na-g4">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g4.app.was.ha.cmcc:38510,:na.node17.was.ha.cmcc:38510,:na.node18.was.ha.cmcc:38510,:na.node17.was.ha.cmcc:38511,:na.node18.was.ha.cmcc:38511"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g4.app.was.ha.cmcc:38512,:na.node17.was.ha.cmcc:38512,:na.node18.was.ha.cmcc:38512,:na.node17.was.ha.cmcc:38513,:na.node18.was.ha.cmcc:38513"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g4.app.was.ha.cmcc:38514,:na.node17.was.ha.cmcc:38514,:na.node18.was.ha.cmcc:38514,:na.node17.was.ha.cmcc:38515,:na.node18.was.ha.cmcc:38515"/>
+                </env>
+				
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g4.app.was.ha.cmcc:38516,:na.node17.was.ha.cmcc:38516,:na.node18.was.ha.cmcc:38516,:na.node17.was.ha.cmcc:38517,:na.node18.was.ha.cmcc:38517"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g4.app.was.ha.cmcc:38518,:na.node17.was.ha.cmcc:38518,:na.node18.was.ha.cmcc:38518,:na.node17.was.ha.cmcc:38519,:na.node18.was.ha.cmcc:38519"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g4.app.was.ha.cmcc:38520,:na.node17.was.ha.cmcc:38520,:na.node18.was.ha.cmcc:38520,:na.node17.was.ha.cmcc:38521,:na.node18.was.ha.cmcc:38521"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g4.app.was.ha.cmcc:38522,:na.node17.was.ha.cmcc:38522,:na.node18.was.ha.cmcc:38522,:na.node17.was.ha.cmcc:38523,:na.node18.was.ha.cmcc:38523"/>
+                </env>
+        </cluster>
+
+        <cluster name="na-g5" bigdistrictflag="true" desc="na-g5">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g5.app.was.ha.cmcc:38610,:na.node19.was.ha.cmcc:38610,:na.node20.was.ha.cmcc:38610,:na.node19.was.ha.cmcc:38611,:na.node20.was.ha.cmcc:38611"/>
+                </env>
+
+                <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g5.app.was.ha.cmcc:38612,:na.node19.was.ha.cmcc:38612,:na.node20.was.ha.cmcc:38612,:na.node19.was.ha.cmcc:38613,:na.node20.was.ha.cmcc:38613"/>
+                </env>
+				 <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g5.app.was.ha.cmcc:38614,:na.node19.was.ha.cmcc:38614,:na.node20.was.ha.cmcc:38614,:na.node19.was.ha.cmcc:38615,:na.node20.was.ha.cmcc:38615"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g5.app.was.ha.cmcc:38616,:na.node19.was.ha.cmcc:38616,:na.node20.was.ha.cmcc:38616,:na.node19.was.ha.cmcc:38617,:na.node20.was.ha.cmcc:38617"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g5.app.was.ha.cmcc:38618,:na.node19.was.ha.cmcc:38618,:na.node20.was.ha.cmcc:38618,:na.node19.was.ha.cmcc:38619,:na.node20.was.ha.cmcc:38619"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g5.app.was.ha.cmcc:38620,:na.node19.was.ha.cmcc:38620,:na.node20.was.ha.cmcc:38620,:na.node19.was.ha.cmcc:38621,:na.node20.was.ha.cmcc:38621"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g5.app.was.ha.cmcc:38622,:na.node19.was.ha.cmcc:38622,:na.node20.was.ha.cmcc:38622,:na.node19.was.ha.cmcc:38623,:na.node20.was.ha.cmcc:38623"/>
+                </env>
+        </cluster>
+
+        <cluster name="na-g6" bigdistrictflag="true" desc="na-g6">
+                <env name="jndiTemplate1" center="1" bigdistrict="1" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g6.app.was.ha.cmcc:38110,:na.node21.was.ha.cmcc:38110,:na.node22.was.ha.cmcc:38110,:na.node21.was.ha.cmcc:38111,:na.node22.was.ha.cmcc:38111"/>
+                </env>
+				 <env name="jndiTemplate2" center="1" bigdistrict="2" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g6.app.was.ha.cmcc:38112,:na.node21.was.ha.cmcc:38112,:na.node22.was.ha.cmcc:38112,:na.node21.was.ha.cmcc:38113,:na.node22.was.ha.cmcc:38113"/>
+                </env>
+
+                <env name="jndiTemplate3" center="1" bigdistrict="3" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g6.app.was.ha.cmcc:38114,:na.node21.was.ha.cmcc:38114,:na.node22.was.ha.cmcc:38114,:na.node21.was.ha.cmcc:38115,:na.node22.was.ha.cmcc:38115"/>
+                </env>
+
+                <env name="jndiTemplate4" center="2" bigdistrict="4" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g6.app.was.ha.cmcc:38116,:na.node21.was.ha.cmcc:38116,:na.node22.was.ha.cmcc:38116,:na.node21.was.ha.cmcc:38117,:na.node22.was.ha.cmcc:38117"/>
+                </env>
+
+                <env name="jndiTemplate5" center="2" bigdistrict="5" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g6.app.was.ha.cmcc:38118,:na.node21.was.ha.cmcc:38118,:na.node22.was.ha.cmcc:38118,:na.node21.was.ha.cmcc:38119,:na.node22.was.ha.cmcc:38119"/>
+                </env>
+
+                <env name="jndiTemplate6" center="2" bigdistrict="6" group="normal">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g6.app.was.ha.cmcc:38120,:na.node21.was.ha.cmcc:38120,:na.node22.was.ha.cmcc:38120,:na.node21.was.ha.cmcc:38121,:na.node22.was.ha.cmcc:38121"/>
+                </env>
+
+                <env name="jndiTemplate0" center="0" group="cross">
+                        <property name="java.naming.factory.initial" value="com.ibm.websphere.naming.WsnInitialContextFactory"/>
+                        <property name="java.naming.provider.url" value="corbaloc::na.g6.app.was.ha.cmcc:38122,:na.node21.was.ha.cmcc:38122,:na.node22.was.ha.cmcc:38122,:na.node21.was.ha.cmcc:38123,:na.node22.was.ha.cmcc:38123"/>
+                </env>
+        </cluster>
+
+</app>
+                                                           
+                                                                               

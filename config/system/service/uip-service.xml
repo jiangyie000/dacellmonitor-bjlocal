@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312"?>
+<services>
+   <service id="qqqqqq" invoke="sv" type="center-service">
+       <property name="package" value="com.test.service.interfaces"/>
+       <property name="busi-center" value="cc"/>
+   </service>
+   
+   <service id="wwwwww" invoke="sv" type="center-service">
+       <property name="package" value="example.customer.service.interfaces"/>
+       <property name="busi-center" value="boss-web-x"/>
+   </service>
+</services>

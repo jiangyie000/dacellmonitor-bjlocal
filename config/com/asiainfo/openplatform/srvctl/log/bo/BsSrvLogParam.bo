@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="aoplog" name="BsSrvLogParam" mainattr="LOG_ID">
+    <mapingenty type="table">{BS_SRV_LOG_PARAM}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="LOG_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">LOG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FLOW_CODE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FLOW_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FLOW_MODE" maxlength="12" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FLOW_MODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TASK_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TASK_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_TASK_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAST_TASK_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SRV_CODE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SRV_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SRV_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SRV_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="START_TIME" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="TIMESTAMP(6)">START_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="END_TIME" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="TIMESTAMP(6)">END_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXECUTE_TIME" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">EXECUTE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_TIME" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="TIMESTAMP(6)">CREATE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ERRO_INFO1" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ERRO_INFO1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ERRO_INFO2" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ERRO_INFO2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IN_DATA1" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IN_DATA1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IN_DATA2" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IN_DATA2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IN_DATA3" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IN_DATA3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IN_DATA4" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IN_DATA4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IN_DATA5" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IN_DATA5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OUT_DATA1" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OUT_DATA1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OUT_DATA2" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OUT_DATA2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OUT_DATA3" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OUT_DATA3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OUT_DATA4" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OUT_DATA4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OUT_DATA5" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OUT_DATA5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ERRO_INFO3" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ERRO_INFO3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ERRO_INFO4" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ERRO_INFO4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ERRO_INFO5" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ERRO_INFO5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT1" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT2" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT3" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT4" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT5" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT5</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

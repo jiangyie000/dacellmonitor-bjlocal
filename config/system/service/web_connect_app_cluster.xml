@@ -1,0 +1,21 @@
+<client>
+  <connect name="boss-web-x"          type="web" appcluster="boss-app-x" desc="web cluster" />
+  <connect name="boss-web-k"          type="web" appcluster="boss-app-k" desc="web cluster" />
+  <connect name="boss-web-a"          type="web" appcluster="boss-app-a" desc="web cluster" />
+  <connect name="boss-web-f"          type="web" appcluster="boss-app-f" desc="web cluster" />
+  <connect name="boss-web-l"          type="web" appcluster="boss-app-l" desc="web cluster" />
+  <connect name="boss-web-g"          type="web" appcluster="boss-app-g" desc="web cluster" />
+  <connect name="boss-web-b"          type="web" appcluster="boss-app-b" desc="web cluster" />
+  <connect name="boss-web-c"          type="web" appcluster="boss-app-c" desc="web cluster" />
+  <connect name="boss-web-q"          type="web" appcluster="boss-app-q" desc="web cluster" />
+  <connect name="boss-web-e"          type="web" appcluster="boss-app-e" desc="web cluster" />
+  <connect name="boss-web-h"          type="web" appcluster="boss-app-h" desc="web cluster" />
+  <connect name="boss-web-r"          type="web" appcluster="boss-app-r" desc="web cluster" />
+  <connect name="boss-web-s"          type="web" appcluster="boss-app-s" desc="web cluster" />
+  <connect name="boss-web-d"          type="web" appcluster="boss-app-d" desc="web cluster" />
+  <connect name="boss-web-n"          type="web" appcluster="boss-app-n" desc="web cluster" />
+  <connect name="boss-web-j"          type="web" appcluster="boss-app-j" desc="web cluster" />
+  <connect name="boss-web-m"          type="web" appcluster="boss-app-m" desc="web cluster" />
+  <connect name="boss-web-p"          type="web" appcluster="boss-app-p" desc="web cluster" />
+  <connect name="channel-web-cluster" type="web" appcluster="na-g3"      desc="web cluster" />
+</client>

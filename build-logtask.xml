@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<project name="project" default="process">
+
+        <property file="build.properties" />
+
+        <target name="init">
+			    <delete dir="${build.tmp.dir}" />
+			    <delete file="${build.dist.dir}/${project.logtask.name}_config.jar" />
+			    <delete file="${build.dist.dir}/${project.logtask.name}_lib.jar" />
+			    <mkdir dir="${build.tmp.dir}/${project.logtask.name}" />
+			    <mkdir dir="${build.tmp.dir}/${project.logtask.name}/classes" />
+			    <mkdir dir="${build.tmp.dir}/${project.logtask.name}/config" />
+			    <mkdir dir="${build.tmp.dir}/${project.logtask.name}/lib" />
+  			</target>
+
+        <target name="compile_logtask" depends="init">
+                 <echo message="覆盖本地化代码--local"/>
+                <copy todir="${build.svn.dir}/logtask" overwrite="true">
+                        <fileset dir="${build.svn.dir}/local/logtask" includes="**/*"/>
+                </copy>
+                <echo message="开始编译java - logtask" />
+                <javac fork="true" srcdir="${build.svn.dir}/logtask/src" destdir="${build.tmp.dir}/${project.logtask.name}/classes" debug="true" debuglevel="lines,vars,source" nowarn="true" includeAntRuntime="no" failonerror="true" >
+                        <compilerarg line="-encoding UTF-8 -J-Xms1024m -J-Xmx1024m"/>
+                        <classpath>
+                                <fileset dir="${build.svn.dir}/logtask/lib" includes="*.jar" />
+                        </classpath>
+                        <include name="**/*.*" />
+                        <exclude name="example/**/*.*" />
+                </javac>
+
+                <echo message="编译完成" />
+
+                <echo message="将编译好的Class打成包" />
+                <jar destfile="${build.dist.dir}/${project.logtask.name}.jar">
+                        <fileset dir="${build.tmp.dir}/${project.logtask.name}/classes">
+                                <include name="**/*.class" />
+                        </fileset>
+                </jar>
+                <echo message="打包完成" />
+
+        </target>
+
+        <target name="process" depends="compile_logtask">
+                <echo message="复制文件" />
+                <copy todir="${build.tmp.dir}/${project.logtask.name}/config">
+                        <fileset dir="${build.svn.dir}/logtask/config" includes="**/*"/>
+                </copy>
+
+                <copy todir="${build.tmp.dir}/${project.logtask.name}/config" overwrite="true">
+                        <fileset dir="${build.config.dir}/${project.logtask.name}/config" includes="**/*"/>
+                </copy>
+
+                <copy todir="${build.tmp.dir}/${project.logtask.name}/lib">
+                        <fileset file="${build.dist.dir}/${project.logtask.name}.jar" />
+                        <fileset dir="${build.svn.dir}/logtask/lib" includes="*.jar" />
+                </copy>
+                <copy todir="${build.tmp.dir}/${project.logtask.name}/lib" overwrite="true">
+                 				<fileset dir="${build.lib.dir}/logtask" includes="*.jar" />
+                </copy>
+                <jar destfile="${build.dist.dir}/${project.logtask.name}_config.jar" basedir="${build.tmp.dir}/${project.logtask.name}/config"/>
+    						<jar destfile="${build.dist.dir}/${project.logtask.name}_lib.jar" basedir="${build.tmp.dir}/${project.logtask.name}/lib"/>
+        </target>
+</project>

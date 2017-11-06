@@ -1,0 +1,30 @@
+<rpc_server>
+    <servers>
+       <server name="TcpNio" className="com.dacell.rpc.tcp.server.DefaultTcpNettyNioServer">
+          <param name="port" value="9091" />
+          <param name="minIdle" value="2" />
+          <param name="maxActive" value="50" />
+          <param name="soTimeOut" value="10000" />
+          <param name="serverHandler" value="com.dacell.rpc.handler.DefaultServerHandler" />
+       </server>
+    </servers>
+    
+	<protocols>
+		<protocol transport_protocol="tcp" data_protocol="HessianTcpNIO"
+			interfaceClassName="com.dacell.rpc.tcpserver.protocol.TcpProtocol"
+			className="com.dacell.rpc.tcp.protocol.hessian.HessianTcpNIOProtocol"
+			code="0002">
+			<param name="pattern" value="*hession*" />
+		</protocol>
+	</protocols>
+	
+	<modules fileposition_path="D:\\writefile_test\\writefile\\mynew\\fileposition.properties">
+	<module name="crm2" id="0001" module_type="sys:business:monitor:" default_queue="true" return_result="true:false" priority_moudleid="" monitor_flag="true">
+	<stage name="data_parser" target_input="channelqueue" target_output="outservice" queue_max_size="50000" thread_num="1">
+	<runable name="" read_batch="5" queue_read_wait_milliseconds="10" class_path="com.dacell.persistent.writereadparseservice.BusinessRunService">
+	<param name="batch_write_num" value="5" />
+	</runable>
+	</stage>
+	</module>
+	</modules>
+</rpc_server>
